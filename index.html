@@ -1,1 +1,374 @@
-Hola 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Néstor Benítez Navarro - Técnico de Soporte Informático y Sistemas</title>
+    <!-- Google Fonts & FontAwesome for icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0f172a;
+            --accent-color: #2563eb;
+            --text-color: #334155;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #1e293b);
+            color: var(--white);
+            padding: 4rem 2rem 3rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        header p.subtitle {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Contact Box Styles */
+        .contact-box {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 12px;
+            max-width: 850px;
+            margin: 0 auto;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item i {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+        }
+
+        .contact-item:hover {
+            color: #60a5fa;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        section h2 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            border-bottom: 2px solid var(--bg-light);
+            padding-bottom: 0.75rem;
+        }
+
+        section h2 i {
+            color: var(--accent-color);
+        }
+
+        .profile-text {
+            font-size: 1.05rem;
+            color: #475569;
+        }
+
+        .job {
+            margin-bottom: 2rem;
+        }
+
+        .job:last-child {
+            margin-bottom: 0;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-bottom: 0.5rem;
+        }
+
+        .job-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .job-company {
+            font-size: 1rem;
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        .job-date {
+            font-size: 0.85rem;
+            color: #64748b;
+            background: var(--bg-light);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        .job-description {
+            list-style-type: disc;
+            padding-left: 1.25rem;
+            margin-top: 0.75rem;
+        }
+
+        .job-description li {
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+            color: #475569;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+
+        .list-clean {
+            list-style: none;
+        }
+
+        .list-clean li {
+            padding: 0.4rem 0;
+            border-bottom: 1px dashed var(--border-color);
+            font-size: 0.95rem;
+        }
+
+        .list-clean li:last-child {
+            border-bottom: none;
+        }
+
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background: var(--bg-light);
+            color: var(--primary-color);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid var(--border-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header con Datos de Contacto Destacados -->
+    <header>
+        <h1>Néstor Benítez Navarro</h1>
+        <p class="subtitle">Técnico de Soporte Informático y Sistemas</p>
+        
+        <div class="contact-box">
+            <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i> Las Palmas, España[cite: 1]
+            </div>
+            <a href="tel:+34618125643" class="contact-item">
+                <i class="fa-solid fa-phone"></i> +34 618 12 56 43[cite: 1]
+            </a>
+            <a href="mailto:nestorbn48@gmail.com" class="contact-item">
+                <i class="fa-solid fa-envelope"></i> nestorbn48@gmail.com[cite: 1]
+            </a>
+            <a href="https://www.linkedin.com/in/nestorbeniteznavarro" target="_blank" class="contact-item">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn[cite: 1]
+            </a>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- Perfil Profesional -->
+        <section>
+            <h2><i class="fa-solid fa-user"></i> Perfil Profesional</h2>
+            <p class="profile-text">
+                Técnico de Soporte Informático y Sistemas con experiencia en entornos corporativos, infraestructuras IT y telecomunicaciones. 
+                Experiencia en administración de servidores y hosting mediante Plesk y cPanel, gestión de dominios, bases de datos y despliegue y optimización de WordPress y PrestaShop. 
+                Experiencia en infraestructuras de red y cableado estructurado, montaje y organización de racks, configuración de equipos de red y resolución de incidencias. 
+                Asimismo, experiencia en instalación, configuración, mantenimiento y reparación de sistemas CCTV analógicos e IP, así como en sistemas de alarma AJAX[cite: 1].
+            </p>
+        </section>
+
+        <!-- Experiencia Profesional -->
+        <section>
+            <h2><i class="fa-solid fa-briefcase"></i> Experiencia Profesional</h2>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Técnico Telecomunicaciones</div>
+                        <div class="job-company">Video Vigilancia Canarias</div>
+                    </div>
+                    <div class="job-date">Abril 2026 - Septiembre 2026[cite: 2]</div>
+                </div>
+                <ul class="job-description">
+                    <li>Implementación y optimización de Racks, montaje físico de equipos, gestión de cableado estructurado (patching) y etiquetado[cite: 2].</li>
+                    <li>Instalación, configuración, mantenimiento y reparación de sistemas de videovigilancia CCTV (analógicos e IP)[cite: 2].</li>
+                    <li>Instalación, configuración y mantenimiento de sistemas de alarma AJAX[cite: 2].</li>
+                    <li>Diagnóstico, resolución de incidencias y soporte técnico directo[cite: 2].</li>
+                    <li>Reparación y puesta a punto de equipos informáticos y periféricos[cite: 2].</li>
+                </ul>
+            </div>
+
+            <hr style="border:0; border-top:1px solid var(--border-color); margin: 1.5rem 0;">
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Administración de Sistemas Informáticos en Red</div>
+                        <div class="job-company">3com</div>
+                    </div>
+                    <div class="job-date">Junio 2024 - Febrero 2026[cite: 2]</div>
+                </div>
+                <ul class="job-description">
+                    <li>Mantenimiento de Hardware e Impresoras y sustitución de componentes[cite: 2].</li>
+                    <li>Soporte y Asistencia Técnica integral, gestión eficiente de tickets de software y hardware[cite: 2].</li>
+                    <li>Gestión Web: Diseño, mantenimiento y actualización de webs y tiendas online en WordPress y PrestaShop[cite: 2].</li>
+                    <li>Sistemas y Servidores: Configuración de equipos y administración básica de servidores de red[cite: 2].</li>
+                </ul>
+            </div>
+
+            <hr style="border:0; border-top:1px solid var(--border-color); margin: 1.5rem 0;">
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Técnico Telecomunicaciones (Prácticas)</div>
+                        <div class="job-company">Innova 360</div>
+                    </div>
+                    <div class="job-date">Febrero 2022 - Junio 2022[cite: 2, 3]</div>
+                </div>
+                <ul class="job-description">
+                    <li>Montaje físico de Racks, cableado estructurado y etiquetado[cite: 3].</li>
+                    <li>Diagnóstico y resolución de incidencias de conectividad en capa física y lógica[cite: 3].</li>
+                    <li>Instalación y despliegue de más de 15 routers y terminales ONT[cite: 3].</li>
+                    <li>Configuración y despliegue de sistemas de telefonía IP o analógica[cite: 3].</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Grid para Educación y Formación -->
+        <div class="grid-2">
+            <section>
+                <h2><i class="fa-solid fa-graduation-cap"></i> Educación</h2>
+                <ul class="list-clean">
+                    <li>
+                        <strong>Administración de Sistemas Informáticos en Red</strong><br>
+                        <span style="color: #64748b; font-size: 0.9rem;">IES El Rincón (2022 - 2024)[cite: 1, 2]</span>
+                    </li>
+                    <li>
+                        <strong>Sistemas de Telecomunicaciones e Informáticos</strong><br>
+                        <span style="color: #64748b; font-size: 0.9rem;">IES Politécnico Las Palmas (2020 - 2022)[cite: 1, 2]</span>
+                    </li>
+                    <li>
+                        <strong>Bachillerato Ciencias Sociales</strong><br>
+                        <span style="color: #64748b; font-size: 0.9rem;">IES José Frugoni Pérez (2017 - 2019)[cite: 1, 2]</span>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2><i class="fa-solid fa-certificate"></i> Formación Adicional</h2>
+                <ul class="list-clean">
+                    <li>Nivel básico de prevención de riesgos laborales (2022)[cite: 1]</li>
+                    <li>Nivel básico Domótica (KNX) (2022)[cite: 1]</li>
+                    <li>Cursos WordPress, WooCommerce y Elementor (2024)[cite: 1]</li>
+                    <li>Curso de CSS en WordPress (2024)[cite: 1]</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Habilidades -->
+        <section>
+            <h2><i class="fa-solid fa-star"></i> Skills y Competencias</h2>
+            <div class="skills-tags">
+                <span class="tag">Resolución de Problemas</span>
+                <span class="tag">Adaptabilidad</span>
+                <span class="tag">Gestión del Tiempo</span>
+                <span class="tag">Orientación al Cliente</span>
+                <span class="tag">Trabajo en Equipo</span>
+                <span class="tag">WordPress & PrestaShop</span>
+                <span class="tag">Sistemas CCTV & AJAX</span>
+                <span class="tag">Infraestructuras de Red</span>
+                <span class="tag">Carnet de Conducir B</span>[cite: 1]
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Néstor Benítez Navarro. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
